@@ -1,0 +1,1 @@
+var Country=function(){var n=function(){};return n.prototype={list:function(){$.get("/country",{},function(n){},"json")},add:function(){}},n}();$(function(){new Country;$(".dropdown").dropdown()}),console.log(1123);
