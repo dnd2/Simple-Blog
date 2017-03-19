@@ -1,9 +1,11 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express'),
+      i18n = require('i18n'),
+      router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  console.log(req.acceptsLanguages());
+  res.render('index', { title: 'Express' + i18n.__('example') });
 });
 
 module.exports = router;
