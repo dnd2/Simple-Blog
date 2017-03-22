@@ -5,6 +5,8 @@ const express = require('express'),
       cookieParser = require('cookie-parser'),
       bodyParser = require('body-parser'),
       i18n = require('i18n'),
+      url  = require('url'),
+      fs   = require('fs'),
       app = express();
 
 var index = require('./routes/index'),
@@ -30,6 +32,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(i18n.init);
+//app.use(routeHandler);
 
 app.use('/', index);
 app.use('/users', users);
@@ -51,6 +54,27 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+function routeHandler(req, res, next) {
+    var path = url.parse(req.url).pathname,
+        name = path.split('/')[1];
+
+    if ( path == '/' ) {
+        name = 'index';
+    }
+
+    fs.stat( __dirname + '/routes/' + name + '.js', function( err, stat ) {
+        if ( ! stat || ! stat.isFile() ) {
+            var err = new Error( 'Not Found' );
+            err.status = 404;
+            next( err );
+        }
+
+        var route = require( './routes/' + name );
+        app.get( '/' + name, route );
+    } );
+    next();
+}
 
 module.exports = app;
 
