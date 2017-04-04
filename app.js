@@ -7,7 +7,8 @@ const express = require('express'),
       i18n = require('i18n'),
       url  = require('url'),
       fs   = require('fs'),
-      app = express();
+      log  = require('./lib/log'),
+      app  = express();
 
 var index = require('./routes/index'),
     users = require('./routes/users');
@@ -16,7 +17,10 @@ var index = require('./routes/index'),
 i18n.configure({
     locales: ['en', 'zh'],  // 声明包含的语言包
     directory: __dirname + '/locales', // 翻译json文件的路径
-    defaultLocale: 'zh' // 默认语言
+    defaultLocale: 'zh', // 默认语言
+    logWarnFn: function (msg) {
+        console.log('warn', msg);
+    }
 });
 
 // view engine setup
@@ -32,7 +36,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(i18n.init);
-//app.use(routeHandler);
+app.use(log.useLog);
 
 app.use('/', index);
 app.use('/users', users);
@@ -82,4 +86,5 @@ module.exports = app;
  * https://segmentfault.com/a/1190000002632604
  * nvm - https://github.com/coreybutler/nvm-windows
  * debug - https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27#.ld0l1d46f
+ * nodejs source project: https://github.com/gcfeng/booklist
  */

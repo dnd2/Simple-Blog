@@ -5,6 +5,7 @@ const express = require('express'),
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
+
     res.render('index', { title: 'Express' + i18n.__('example') });
 });
 
