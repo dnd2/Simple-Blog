@@ -2,9 +2,15 @@
 	"example": "例子",
 	"title": "标题",
     "param_invalid": "参数无效",
+    "num_invalid": "无效的数值类型",
     "empty_category_name": "类目名称不能为空",
     "category_saved_success": "类目保存成功",
     "category_saved_fail": "类目保存失败",
     "category_count_error": "获取类目数量失败",
-    "category_item_not_existed": "需要修改的记录不存在"
+    "category_item_not_existed": "需要修改的记录不存在",
+    "article_count_error": "文章数量读取错误",
+    "article_name_empty": "标题不能为空",
+    "article_desc_empty": "描述不能为空",
+    "article_saved_fail": "文章保存失败",
+    "article_saved_success": "文章保存成功"
 }
