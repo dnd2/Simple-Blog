@@ -10,7 +10,8 @@
     "category_item_not_existed": "需要修改的记录不存在",
     "article_count_error": "文章数量读取错误",
     "article_name_empty": "标题不能为空",
-    "article_desc_empty": "描述不能为空",
+    "article_desc_empty": "简述不能为空",
+    "article_content_empty": "文章内容不能为空",
     "article_saved_fail": "文章保存失败",
     "article_saved_success": "文章保存成功"
 }
