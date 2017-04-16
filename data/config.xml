@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<configuration>
+    <site_name>My Blog</site_name>
+    <site_title></site_title>
+    <site_logo>Logo</site_logo>
+    <site_db>file/db</site_db>
+    <site_step>1</site_step>
+    <site_installed>1</site_installed>
+</configuration>

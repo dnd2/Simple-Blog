@@ -11,20 +11,24 @@ const express = require('express'),
  */
 router.get('/', function(req, res, next) {
     // 检查用户是否是首次访问，首次访问进入新建类目页面
-    let cate   = new Category(),
-        params = {
-            title: 'Create Your Simple Blog'
-        };
+    let cate   = new Category(), params, navItems;
+
+    navItems = i18n.__( 'nav_guide' ).split( ',' );
+    params = {
+       title: i18n.__( 'title' ),
+       desc: i18n.__( 'desc' ),
+       nav: navItems,
+   };
 
     fDb.isExisted().then( function( has ) {
         params.has = has;
 
-        if ( true === has ) {
+        if ( true === has ) { 
             cate.getCategories().then( function( data ) {
-                params.categories = data.categories; console.log(data);
+                params.categories = data.categories;
                 res.render( 'index', params );
             });
-        } else {
+        } else { 
             res.render('index', params);
         }
     }).catch( function( err ) {

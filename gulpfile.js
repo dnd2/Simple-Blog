@@ -7,7 +7,9 @@
 const gulp = require( 'gulp' ),
       sass = require( 'gulp-sass' ),
       uglify = require( 'gulp-uglify' ),
-      clean = require( 'gulp-clean-css' );
+      clean = require( 'gulp-clean-css' ),
+      ts    = require( 'gulp-typescript' ),
+      tsPrj = ts.createProject( "tsconfig.json" );
 
 gulp.task( 'sass', function() {
     gulp.src( 'src/scss/*.scss' )
@@ -32,4 +34,10 @@ gulp.task( 'watch', function() {
     gulp.watch( 'src/js/**/*.js', ["js"] );
 } );
 
-gulp.task( 'default', ['sass', 'js', 'watch'] );
+gulp.task( 'ts', function() {
+    return tsPrj.src()
+        .pipe( tsPrj() )
+        .js.pipe( gulp.dest( 'public/javascripts' ) )
+});
+
+gulp.task( 'default', ['sass', 'ts', 'watch'] );

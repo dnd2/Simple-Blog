@@ -1,32 +1,50 @@
 <%include header.html%>
-  	<div class="ui container">
-	    <h1>Welcome, Simple blog Generator</h1>
-	    <p>This tool provides a simple way to generator a simple blog for you</p>
+  	<!--div class="ui container main-body">
+	    <h1 class="ui center aligned header">Welcome, Simple blog Generator</h1>
+	    <h3 class="ui center aligned header">This tool provides a simple way to generator a simple blog for you</h3>
 
-	    <form class="ui form">
-          <h4 class="ui dividing header">创建分类</h4>
-          <div class="field">
-            <label>Name</label>
-            <div class="ui selection dropdown">
-               <input type="hidden" name="card[type]">
-               <div class="default text">Type</div>
-                  <i class="dropdown icon"></i>
-                  <div class="menu">
-                    <div class="item" data-value="visa">
-                      <i class="visa icon"></i>
-                      Visa
-                    </div>
-                    <div class="item" data-value="amex">
-                      <i class="amex icon"></i>
-                      American Express
-                    </div>
-                    <div class="item" data-value="discover">
-                      <i class="discover icon"></i>
-                      Discover
-                    </div>
-                  </div>
-               </div>
-          </div>
-        </form>
-  	</div>		  
+	    <div class="ui container text">
+        <h2 class="ui header">Select a category</h2>
+        <h4 class="ui top attached block header">
+          Top Block Header
+        </h4>  
+        <div class="ui bottom attached segment">
+          Segment
+        </div>
+      </div>
+  	</div-->		
+    <!--
+       1. 开始页，如果是第一次进入，文案提示会有区别
+       2. 配置页，有简单的配置信息，如：设置网页logo，网站名称，数据保存方式
+       3. 建立blog或编辑blog页，第一次则显示友好提示信息并可以选择类目，否则显示当前已有目录并可修改
+       4. 文章页，第一次选择类目并创建文章，否则修改文章
+       5. 生成blog页面并可选择是否推送到远端 
+       Reference: 
+          http://www.semantic-ui.cn/usage/layout.html
+          https://purecss.io/layouts/
+    -->
+    <div class="ui container">
+      <!--div class="ui inverted vertical masthead center aligned segment">
+        <div class="ui text container">
+          <h1 class="ui inverted header">
+             <img src="/images/tpl/my_blog.png" alt="" />
+             <p><%= title%></p>
+          </h1>
+          <h2><%= desc%></h2>
+          <div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div>
+        </div>
+      </div-->
+      <header class="guide">
+         <h1 class="ui header">创建你自己的博客</h1> 
+         <h2>Quickstart your next web project with these example layouts.</h2>
+      </header>  
+      <div class="guide-wrap">
+         <div class="ui pointing menu">
+         <%for (i = 0; i < nav.length; i++) { %>  
+            <a class="active item"><i class="icon-num"><%= i + 1%></i><%= nav[i]%></a>
+         <% } %>   
+        </div>
+      </div>  
+ 
+    </div>   
 <%include footer.html%>

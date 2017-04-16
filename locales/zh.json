@@ -1,6 +1,7 @@
 {
-	"example": "例子",
-	"title": "标题",
+	"title": "简易的个人博客",
+    "desc": "创建你自己的个人博客轻松加愉快",
+    "nav_guide": "配置,设定类目,建立文章,生成Blog,概况",
     "param_invalid": "参数无效",
     "num_invalid": "无效的数值类型",
     "empty_category_name": "类目名称不能为空",

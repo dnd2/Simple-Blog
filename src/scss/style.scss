@@ -1,3 +1,59 @@
+/* http://www.w3cplus.com/sassguide/syntax.html */
+body {
+  font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
 a {
   text-decoration: none;
+}
+.main-body {
+  margin-top: 3em;
+}
+.masthead {
+  &.segment {
+    min-height: 700px;
+    padding: 1em 0em;
+  }  
+  h1.header {
+    margin-top: 3em;
+    margin-bottom: 0em;
+    font-size: 4em;
+    font-weight: normal;
+  }  
+}
+
+/* Configuration Guide */
+.guide-wrap {
+  max-width: 900px;
+  margin:0 auto;
+  a {
+    font-family: "Microsoft YaHei";
+  }
+}
+
+header.guide {
+  padding: 20px 0;
+  text-align: center;
+  h2 {
+    font-size: 120%;
+    font-weight: 100;
+  }
+}
+
+.border-line {
+  border:1px solid;
+}
+
+.icon-num {
+   width: 20px;
+   height: 20px;
+   line-height: 20px;
+   margin-right: 5px;
+   background-color: #f8f8f8;
+   border-radius: 50px;
+   font-weight: bold;
+   text-align: center;
+   &.current {
+     background-color: #699;
+     color: #fff;
+   }
 }
