@@ -5,5 +5,5 @@
     <site_logo>Logo</site_logo>
     <site_db>file/db</site_db>
     <site_step>1</site_step>
-    <site_installed>1</site_installed>
+    <site_installed>0</site_installed>
 </configuration>
