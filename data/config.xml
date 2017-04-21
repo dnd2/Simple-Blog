@@ -1,9 +1,17 @@
 <?xml version="1.0"?>
 <configuration>
-    <site_name>My Blog</site_name>
-    <site_title>This is my first blog</site_title>
-    <site_logo>Logo</site_logo>
-    <site_db>file/db</site_db>
-    <site_step>1</site_step>
-    <site_installed>0</site_installed>
+    <site>
+        <site_name>My Blog</site_name>
+        <site_title>This is my first blog</site_title>
+        <site_logo>Logo</site_logo>
+        <site_db>file/db</site_db>
+        <site_step>1</site_step>
+        <site_installed>0</site_installed>
+    </site>
+    <user>
+        <name>My Blog</name>
+        <nickname>ken</nickname>
+        <intro>I am a developer specializing in develop all kinds of web application and website</intro>
+        <avatar>face.png</avatar>
+    </user>
 </configuration>
