@@ -37,4 +37,10 @@ router.get('/', function(req, res, next) {
     });
 });
 
+router.get( '/step/:id', function( req, res, next ) {
+    let config = fDb.getConfig();
+
+    
+});
+
 module.exports = router;

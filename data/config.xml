@@ -1,17 +1,17 @@
-<?xml version="1.0"?>
+<?xml version='1.0' encoding='utf-8'?>
 <configuration>
     <site>
-        <site_name>My Blog</site_name>
-        <site_title>This is my first blog</site_title>
-        <site_logo>Logo</site_logo>
-        <site_db>file/db</site_db>
+        <site_name  type="text" validate="is-require">My Blog1</site_name>
+        <site_title  type="text">This is my first blog</site_title>
+        <site_logo  type="image">Logo</site_logo>
+        <site_db  type="checkbox">file/db</site_db>
         <site_step>1</site_step>
         <site_installed>0</site_installed>
     </site>
     <user>
-        <name>My Blog</name>
-        <nickname>ken</nickname>
-        <intro>I am a developer specializing in develop all kinds of web application and website</intro>
-        <avatar>face.png</avatar>
+        <name  type="text" validate="is-require">My Blog</name>
+        <nickname  type="text" validate="is-require">ken</nickname>
+        <intro  type="muli-text" validate="is-require">I am a developer specializing in develop all kinds of web application and website</intro>
+        <avatar  type="image" validate="is-require">face.png</avatar>
     </user>
 </configuration>
