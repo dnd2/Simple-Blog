@@ -1,1 +1,1 @@
-{"name":"articles","total":1,"articles":[{"id":2,"name":"New Article","created":"1492229757","updated":"1492229857"}]}
+{"name":"articles","total":2,"articles":[{"id":2,"name":"New Article","catid":1,"created":"1492229757","updated":"1492229857"},{"id":2,"name":"New Article","created":1493891554,"updated":1493891554}]}
