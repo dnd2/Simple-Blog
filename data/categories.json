@@ -1,1 +1,1 @@
-{"name":"categories","total":1,"categories":[{"id":1,"name":"cate 1","parent":0,"level":1}]}
+{"name":"categories","total":6,"categories":[{"id":1,"name":"cate 1","parent":0,"level":1},{"id":2,"name":"cate 2","parent":0,"level":1},{"id":3,"name":"cate 3","parent":1,"level":1},{"id":4,"name":"cate 4","parent":1,"level":1},{"id":5,"name":"cate 5","parent":2,"level":1},{"id":6,"name":"cate 6","parent":1,"level":1}]}
