@@ -17,5 +17,6 @@
     "article_content_empty": "文章内容不能为空",
     "article_saved_fail": "文章保存失败",
     "article_saved_success": "文章保存成功",
-    "article_cid_invalid": "请选择文章对应的类目ID"
+    "article_cid_invalid": "请选择文章对应的类目ID",
+    "article_edit_empty": "您要修改的文章不存在"
 }
